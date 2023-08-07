@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="style_menu.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="contenedor"> 
+            <h1 class="titulo">Página principal</h1>
+            <a href="#menu" class="Menu">
+                <img src="./assets/menu.svg" class="icono">
+            </a>
+            <a href="#" class="Menu cerrar">
+                <img src="./assets/close.svg" class="icono">
+            </a>
+
+            <ul class="dropdown" id="menu">
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/house.svg" class="dropdown_icon">
+                        <span class="dropdown_span">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/projects.svg" class="dropdown_icon">
+                        <span class="dropdown_span">Proyectos</span>
+                        <img src="./assets/down.svg" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">proyecto N°1</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">proyecto N°2</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">proyecto N°3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/email.svg" class="dropdown_icon">
+                        <span class="dropdown_span">Contacto</span>
+                        <img src="./assets/down.svg" class="dropdown_arrow">
+                        <input type="checkbox" class="dropdown_check">
+                    </a>
+                    <div class="dropdown_content">
+                        <ul class="dropdown_sub">
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Contacto N°1</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Contacto N°2</a>
+                            </li>
+                            <li class="dropdown_li">
+                                <a href="#" class="dropdown_anchor">Contacto N°3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown_list">
+                    <a href="#" class="dropdown_link">
+                        <img src="./assets/help.svg" class="dropdown_icon">
+                        <span class="dropdown_span">Centro de ayudas</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

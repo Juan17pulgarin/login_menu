@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Handjet&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Edu SA Beginner', cursive;
+}
+
+body{
+    background-image: url("./assets/fondo_login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.nav{
+    background-color: #46a2fd;
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has( .dropdown:target ){
+    --img1: scale(0);
+    --img2: scale(1);
+
+    --clip: inset(0 0 0 0);
+}
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.titulo{
+    color: white;
+    grid-area: title;
+    cursor: pointer;
+}
+
+.Menu{
+    grid-area: img;
+    position: relative;
+    z-index: 10;
+
+    transform: var(--img1);
+}
+
+.cerrar{
+    transform: var(--img2);
+}
+
+.icono{
+    width: 30px;
+    display: block;
+}
+
+.dropdown{
+    position: absolute;
+    background-color: black;
+    width: 75%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 300px;
+    padding: 1em;
+    display: grid;
+    align-content: center;
+    gap: 1em;
+    overflow-y: auto;    
+
+    clip-path: var(--clip,inset(0 0 100% 100%));
+    transition: clip-path .5s;
+}
+
+.dropdown_list{
+    list-style: none;
+}
+
+.dropdown_link{
+    color: white;
+    padding: 1em .7em;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    position: relative;
+    background-color: var(--bg,transparent);
+    border-radius: 6px;
+}
+
+.dropdown_list:has( :checked ){
+    --rows: 1fr;
+    --rotate: rotate(180deg);
+    --bg: #283038;
+}
+
+.dropdown_check{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown_arrow{
+    margin-left: auto;
+    transform: var(--rotate,0);
+    transition: .2s transform;
+}
+
+.dropdown_content{
+    display: grid;
+    grid-template-rows: var(--rows,0fr);
+    transition: .3s grid-template-rows;
+}
+
+.dropdown_sub{
+    overflow: hidden;
+}
+
+.dropdown_li{
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+
+
+.dropdown_anchor{
+    padding: 1em 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
